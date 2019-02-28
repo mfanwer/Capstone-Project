@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login Page | Register | Signup </title>
+		<link rel="shortcut icon" href="F:\Projects\mini\Project_1\images\icon.ico" />
+		<link rel="stylesheet" href="css/resetlogin.css" type="text/css">
+		<link rel="stylesheet" href="css/stylelogin.css" type="text/css">
+		<meta name="viewport" content="width=device-width, initial-sclae=1">
+		<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<script language="JavaScript" >
+function getSubmit()
+{
+var LastName;
+var Firstn = names.value ;
+
+var cn = new ActiveXObject("ADODB.Connection");
+//here you must use forward slash to point strait
+var strConn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source = C:/clientDB.mdb";
+var rs = new ActiveXObject("ADODB.Recordset");
+//var SQL = "INSERT INTO Customers(FirstName, Surname)"
+//+ " VALUES ( '"+ names.value +"', '" + surname.value +"')";
+var SQL = "select Surname, DOB from Customers where FirstName = '" + Firstn + "'";
+
+cn.Open(strConn);
+rs.Open(SQL, cn);
+surname.value = rs(0);
+DOB.value = rs(1);
+//alert(rs(0));
+rs.Close();
+cn.Close();
+}
+
+</script>
+	</head>
+	<body>
+		<div id="logo">
+			<a <!--href="F:/Projects/mini/Project_1/HomePage.html"--><img src="F:\Projects\mini\Project_1\images\logo_1.png" /></a>
+		</div>
+		<div id="container">
+			<div id="main-text">
+				<h1>Get in touch with us</h1>
+				<h4>You can <strong>Login</strong> and can be <strong>Sign up</strong> here</h4>
+				<div id="button">
+					<a href="F:/Projects/mini/Project_1/HomePage.html"><input type="submit" value="HOME"></a>
+				</div>
+			</div>
+			<div id="sub-1">
+				<form id="log-in">
+					<header id="log-in-header">
+						<h3>Login Form</h3>
+					</header>
+					<div>
+						<label>Email*</label>
+						<input type="email">
+					</div>
+					<div>
+						<label>Password*</label>
+						<input type="text">
+					</div>
+					<div>
+						<em>* Required Fields</em>
+						<input type="submit" value="Login"
+					</div>
+					<div class="clearfix"></div>
+				</form>	
+			</div>
+			<div id="sub-2">
+				<form id="sign-up">
+					<header id="log-in-header">
+						<h3>Sign Up Here</h3>
+					</header>
+					<div>
+						<label>Name*</label>
+						<input type="text">
+					</div>
+					<div>
+						<label>User Name*</label>
+						<input type="text">
+					</div>
+					<div>
+						<label>Password*</label>
+						<input type="text">
+					</div>
+					<div>
+						<label>Email*</label>
+						<input type="email">
+					</div>
+					<div>
+						<label>Phone</label>
+						<input type="text">
+					</div>
+					<div>
+						<em>* Required Fields</em>
+						<input type="submit" value="Sign Up!"
+					</div>
+					<div class="content-footer">
+						<p>The Information provided by you will never be going to dispach to anyone without your permission.</p>
+					</div>
+				</form>	
+			</div>
+			<div class="clearfix"></div>
+		</div>	<!--Container-->
+	<footer id="main-footer">
+		<p>Copyright &copy; India</p>
+	</footer>
+	</body>
+</html>
