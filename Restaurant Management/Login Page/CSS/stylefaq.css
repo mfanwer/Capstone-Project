@@ -1,0 +1,31 @@
+body{
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+#menu-item a:hover{
+	background:#2F4F4F;
+}
+#ask{
+	width:70%;
+	background:#F0F8FF;
+	margin:-59px auto;
+}
+h1{
+	text-align:center;
+}
+h3{
+	font-size:15px;
+	margin:10px 0;
+}
+p{
+	margin:10px 0;
+	line-height:1.5em;
+	font-size:15px;
+}
+
+footer#main-footer{
+	padding-bottom:80px 70px 70px 70px;
+	margin:70px;
+	text-align:center;
+	border-top:#CCC solid 2px;
+	color:#AAA;
+}

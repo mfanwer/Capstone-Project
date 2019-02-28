@@ -1,0 +1,109 @@
+body{
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	background:#DEB887;
+}
+.help{
+	cursor:help;
+}
+#menu-item a:hover{
+	background:#2F4F4F;
+}
+#menu-item, #menu-item ul{
+
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+#menu-item{
+	width:70%;
+	margin:70px auto;
+	border:2px solid #107677;
+	background:#008080;
+	background:linear-gradient(#lebdbe,#107677);
+	border-radius:9px 9px 0 0;
+	box-shadow:0 2px 2px #CCC;
+}
+
+#menu-item:before,
+#menu-item:after{
+	content:"";
+	display:block;
+	
+}
+
+#menu-item:after{
+	clear:both;
+}
+#menu-item li{
+	float:left;
+	/*background:url(../images/dividerrfr.jpg) no-repeat;*/
+	position:relative;
+}
+#menu-item a{
+	float:left;
+	padding:12px 30px;
+	color:#FFF;
+	text-decoration:none;
+	text-transform:uppercase;
+	font:bold 13px Lucida Sans Unicode,Lucida Grande;
+}
+#menu-item ul{
+	margin:20px 0 0 0;
+	opacity:0;
+	visibility:hidden;
+	position:absolute;
+	top:38px;
+	left:0;
+	z-index:1;
+	background:#008080;
+	box-shadow:0 -1px 0 rgba(255,255,255,.3);
+	border-radius:4px 4px 0 0;
+	transition:all .2s ease-in-out;
+}
+#menu-item li:hover>ul{
+	opacity:1;
+	visibility:visible;
+	margin:0;
+}
+#menu-item ul ul{
+	top:0;
+	left:150px;
+	margin:300px 0 0 20px;
+	box-shadow:0 -1px 0 rgba(255,255,255,.3);
+}
+#menu-item ul a{
+	padding:10px;
+	width:130px;
+	display:block;
+	white-space:nowrap;
+	float:none;
+	text-transform:none;
+}
+#menu-item ul a:hover{
+	background:#2F4F4F;
+}
+#menu-item ul li:first-child> a:after{
+	content:'';
+	position:absolute;
+	left:40px;
+	top:-6px;
+	border-left:6px solid transparent;
+	border-right:6px solid transparent;
+	border-bottom:6px solid #8FBC8F;
+}
+#menu-item ul ul li:first-child> a:after{
+	left:-6px;
+	top:50%;
+	margin-top:-6px;
+	border-left:0px;
+	border-top:6px solid transparent;
+	border-right:6px solid #8FBC8F;
+	border-bottom:6px solid transparent;
+}
+footer#main-footer{
+	padding-bottom:80px 70px 70px 70px;
+	margin:70px;
+	text-align:center;
+	border-top:#CCC solid 2px;
+	color:#AAA;
+}
